@@ -41,3 +41,21 @@
 ## web
 
 * Protonmail theme: [pm theme](https://github.com/amdelamar/pm-theme)
+
+## Setup git bare
+
+`mkdir dotfiles`
+
+`git init --bare $HOME/dotfiles`
+
+Add the following to you shell dotfile: `alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+`config config --local status.showUntrackedFiles no`
+
+## To use it
+
+`config add /path/to/file`
+
+`config commit -m "Commit message"`
+
+`config push`
