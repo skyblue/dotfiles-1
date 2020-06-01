@@ -415,4 +415,5 @@
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"window.titleBarStyle": "custom",
+	"git.enableSmartCommit": true,
 }
