@@ -47,6 +47,7 @@
 * Chrome style: [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 * Firefox style: [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
 * GitHub style: [GitHub-Dark](https://github.com/StylishThemes/GitHub-Dark)
+* GitLab style: [dark-gitlab](https://gitlab.com/Avinash-Bhat/dark-gitlab)
 * Wikipedia theme: [Wikipedia-Dark](https://github.com/StylishThemes/Wikipedia-Dark)
 * Stack Overflow theme: [StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark)
 * Protonmail theme: [pm-theme](https://github.com/amdelamar/pm-theme)
