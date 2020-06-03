@@ -50,6 +50,20 @@
 
 I do not own the right to the wallpapers iamges.
 
+For vertical screen
+![](Pictures/Wallpapers/eberhard-grossgasteiger-774058-unsplash.jpg)
+
+![](Pictures/Wallpapers/forest.jpg)
+
+![](Pictures/Wallpapers/dc-cavalleri.jpg)
+
+![](Pictures/Wallpapers/atanas-malamov-1104625-unsplash.jpg)
+
+For wide screen
+![](Pictures/Wallpapers/_smokefilledsnoqualmievalley.jpg)
+
+![](Pictures/Wallpapers/Xf3VK52.jpg)
+
 ## Setup git bare
 
 `mkdir dotfiles`
