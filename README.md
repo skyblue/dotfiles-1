@@ -16,18 +16,18 @@
 | Shell Theme | [powerlevel10k](https://github.com/romkatv/powerlevel10k) | a Zsh theme |
 | Font | [Roboto](https://fonts.google.com/specimen/Roboto) |  |
 | File | [Nautilus](https://github.com/GNOME/nautilus) |  |
-|  |  |  |
+| Porgrams |  |  |
 | Editor | [Code - OSS](https://code.visualstudio.com/), [Vim](https://github.com/vim/vim) |  |
 | Web | [Brave](https://brave.com/), [Firefox](https://www.mozilla.org/en-US/firefox/new/) |  |
 | Social | [Discord](https://discord.com/), [Signal](https://signal.org/) |  |
 | Virtualization | [Virtual Box](https://www.virtualbox.org/) |  |
 | Game | [Steam](https://store.steampowered.com/) |  |
 | Video | [VLC](https://www.videolan.org/vlc/) |  |
-| Music | [VLC](https://www.videolan.org/vlc/) |  |
+| Music | [MOC](https://wiki.archlinux.org/index.php/MOC), [VLC](https://www.videolan.org/vlc/) |  |
 | Calendar | gnome-calendar, Evolution |  |
 | Encryption | [VeraCrypt](https://github.com/veracrypt/VeraCrypt) |  |
 | Mail | [Protonmail](https://protonmail.com/), [Tutanota](https://tutanota.com/) |  |
-|  |  |  |
+| Console |  |  |
 | CPU monitoring | [s-tui](https://github.com/amanusk/s-tui) |  |
 | System monitoring | [htop](https://github.com/hishamhm/htop) |  |
 | System infos | [neofetch](https://github.com/dylanaraps/neofetch) |  |
@@ -38,7 +38,7 @@
 | GTK+ settings | [lxappearance]() |  |
 | Terminal clock | tty-clock |  |
 | Terminal color | [pywal](https://github.com/dylanaraps/pywal) |  |
-|  | Web |  |
+| Web |  |  |
 | Chrome style | [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) |  |
 | Firefox style | [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) |  |
 | GitHub style | [GitHub-Dark](https://github.com/StylishThemes/GitHub-Dark) |  |
@@ -47,6 +47,8 @@
 | Stack Overflow theme | [StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark) |  |
 | Protonmail theme | [pm-theme](https://github.com/amdelamar/pm-theme) |  |
 |  |  |  |
+
+I do not own the right to the wallpapers iamges.
 
 ## Setup git bare
 
