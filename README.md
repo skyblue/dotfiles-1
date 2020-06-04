@@ -46,7 +46,6 @@
 | Wikipedia theme | [Wikipedia-Dark](https://github.com/StylishThemes/Wikipedia-Dark) |  |
 | Stack Overflow theme | [StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark) |  |
 | Protonmail theme | [pm-theme](https://github.com/amdelamar/pm-theme) |  |
-|  |  |  |
 
 I do not own the right to the wallpapers iamges.
 
