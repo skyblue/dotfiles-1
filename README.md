@@ -38,7 +38,7 @@
 | GTK+ settings | [lxappearance]() |  |
 | Terminal clock | tty-clock |  |
 | Terminal color | [pywal](https://github.com/dylanaraps/pywal) |  |
-| Web |  |  |
+| **Web** |  |  |
 | Chrome style | [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) |  |
 | Firefox style | [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) |  |
 | GitHub style | [GitHub-Dark](https://github.com/StylishThemes/GitHub-Dark) |  |
@@ -47,21 +47,54 @@
 | Stack Overflow theme | [StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark) |  |
 | Protonmail theme | [pm-theme](https://github.com/amdelamar/pm-theme) |  |
 
-I do not own the right to the wallpapers iamges.
+## Shortcuts
 
-For vertical screen
-![](Pictures/Wallpapers/eberhard-grossgasteiger-774058-unsplash.jpg)
+| System | Shortcut |
+|---|---|
+| **Navigation** |  |
+| Hide all normal windows | Super+D |
+| Move to workspace above | Super+P |
+| Move to workspace below | Super+; |
+| Move window one monitor down | Super+Alt+K |
+| Move window one monitor to the left | Super+Alt+J |
+| Move window one monitor to the right | Super+Alt+L |
+| Move window one workspace down | Super+Alt+; |
+| Move window one workspace up | Super+Alt+P |
+| Switch applications | Super+Tab |
+| Switch to workspace 1 | Super+[ |
+| Switch to workspace 2 | Super+] |
+| **Screenshots** |  |
+| Copy a screenshot of an area to clipboard | Print |
+| **Sound and Media** |  |
+| Next track | Super+N |
+| Play (or play/pause) | Pause |
+| Previous track | Super+B |
+| **System** |  |
+| Lock screen | Super+Escape |
+| Log out | Super+Backspace |
+| **Windows** |  |
+| Close window | Super+W |
+| Hide window | Super+K |
+| Toggle fulscreen mode | Super+Alt+I |
+| Toggle maximization state | Super+I |
+| View split on left | Super+J |
+| View split on right | Super+L |
+| **Launchers** |  |
+| Launch terminal | Super+Alt Super+1 |
+| launch editor | Super+2 |
+| Launch file explorer | Super+3 |
+| Launch web browser | Super+4 |
+
+## Wallpapers
+
+I do not own the right to the wallpapers iamges.
 
 ![](Pictures/Wallpapers/forest.jpg)
 
 ![](Pictures/Wallpapers/dc-cavalleri.jpg)
 
-![](Pictures/Wallpapers/atanas-malamov-1104625-unsplash.jpg)
-
 For wide screen
 ![](Pictures/Wallpapers/_smokefilledsnoqualmievalley.jpg)
-
-![](Pictures/Wallpapers/Xf3VK52.jpg)
 
 ## Setup git bare
 
