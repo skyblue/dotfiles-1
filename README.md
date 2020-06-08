@@ -63,15 +63,6 @@
 | Switch applications | Super+Tab |
 | Switch to workspace 1 | Super+[ |
 | Switch to workspace 2 | Super+] |
-| **Screenshots** |  |
-| Copy a screenshot of an area to clipboard | Print |
-| **Sound and Media** |  |
-| Next track | Super+N |
-| Play (or play/pause) | Pause |
-| Previous track | Super+B |
-| **System** |  |
-| Lock screen | Super+Escape |
-| Log out | Super+Backspace |
 | **Windows** |  |
 | Close window | Super+W |
 | Hide window | Super+K |
@@ -80,10 +71,20 @@
 | View split on left | Super+J |
 | View split on right | Super+L |
 | **Launchers** |  |
-| Launch terminal | Super+Alt Super+1 |
+| Launch terminal | Super+Return Super+1 |
 | launch editor | Super+2 |
 | Launch file explorer | Super+3 |
 | Launch web browser | Super+4 |
+| **Screenshots** |  |
+| Copy a screenshot of an area to clipboard | Print |
+| **Sound and Media** |  |
+| Microphone mute/unmute | Super+M |
+| Next track | Super+N |
+| Play (or play/pause) | Pause |
+| Previous track | Super+B |
+| **System** |  |
+| Lock screen | Super+Backspace |
+| Log out | Super+Alt+Backspace |
 
 ## Wallpapers
 

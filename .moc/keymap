@@ -61,7 +61,7 @@
 # Default key configuration for MOC (and a list of all available commands):
 
 # MOC control keys:
-quit_client           = P
+quit_client           = q
 quit                  = Q
 
 # Menu and interface control keys:
