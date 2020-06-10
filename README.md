@@ -73,8 +73,9 @@
 | **Launchers** |  |
 | Launch terminal | Super+Return Super+1 |
 | launch editor | Super+2 |
-| Launch file explorer | Super+3 |
-| Launch web browser | Super+4 |
+| Launch web browser | Super+3 |
+| Launch social app | Super+4 |
+| Launch file explorer | Super+5 |
 | **Screenshots** |  |
 | Copy a screenshot of an area to clipboard | Print |
 | **Sound and Media** |  |
@@ -87,7 +88,7 @@
 | Log out | Super+Alt+Backspace |
 
 ## Wallpapers
-
+1
 I do not own the right to the wallpapers iamges.
 
 ![](Pictures/Wallpapers/forest.jpg)
