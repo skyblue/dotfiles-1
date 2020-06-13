@@ -252,5 +252,4 @@ ${c0}  ████  ████  ████  ${lc}SHELL:     ${ic}${shell}${
 ${c0}  ████  ████  ████  ${lc}${envtype}:        ${ic}${WM}${reset}
 EOF
 
-
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
