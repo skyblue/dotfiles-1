@@ -88,7 +88,7 @@
 | Log out | Super+Alt+Backspace |
 
 ## Wallpapers
-1
+
 I do not own the right to the wallpapers iamges.
 
 ![](Pictures/Wallpapers/forest.jpg)
