@@ -20,8 +20,8 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 HISTFILE=~/.zhistory
 HISTSIZE=1000
 SAVEHIST=500
-#export EDITOR=/usr/bin/nano
-#export VISUAL=/usr/bin/nano
+export EDITOR=/usr/bin/nano
+export VISUAL=/usr/bin/code
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 
@@ -57,8 +57,10 @@ alias cp="cp -i"                                                # Confirm before
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias configu='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME add . && /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME commit && /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME push'
 
-# Theming section  
+# Theming section
 autoload -U compinit colors zcalc
 compinit -d
 colors
@@ -238,7 +240,7 @@ reset="$(tput sgr0)"
 lc="${reset}${bold}${green}"    # labels
 nc="${reset}${bold}${green}"    # user and hostname
 ic="${reset}${bold}${white}"    # info
-c0="${reset}${green}"            # first color
+c0="${reset}${green}"           # first color
 
 ## OUTPUT
 
@@ -251,5 +253,3 @@ ${c0}  ████  ████  ████  ${lc}PACKAGES:  ${ic}${packages
 ${c0}  ████  ████  ████  ${lc}SHELL:     ${ic}${shell}${reset}
 ${c0}  ████  ████  ████  ${lc}${envtype}:        ${ic}${WM}${reset}
 EOF
-
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
