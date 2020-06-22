@@ -58,7 +58,6 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-alias configu='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME add . && /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME commit && /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME push'
 
 # Theming section
 autoload -U compinit colors zcalc

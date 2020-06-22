@@ -389,7 +389,7 @@
         "editor.tabSize": 2
 	},
 	"window.zoomLevel": 0,
-	"workbench.statusBar.visible": true,
+	"workbench.statusBar.visible": false,
 	"git.autofetch": true,
 	"python.jediEnabled": false,
 	"gitlens.codeLens.enabled": false,
