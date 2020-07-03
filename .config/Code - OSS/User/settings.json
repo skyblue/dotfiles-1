@@ -1,7 +1,8 @@
 {
 	"material-icon-theme.folders.color": "#90a4ae",
 	"workbench.iconTheme": "material-icon-theme",
-	"workbench.colorTheme": "Tomorrow Night",
+	"workbench.colorTheme": "Nord",
+	/*"workbench.colorTheme": "Tomorrow Night",
 	"workbench.colorCustomizations": {
 		"activityBar.background": "#2f333d",
 		"activityBar.foreground": "#d7dae0",
@@ -257,125 +258,114 @@
 	},
 	"editor.tokenColorCustomizations": [
 		{
-			"name": "Comment",
 			"scope": "comment",
 			"settings": {
 				"foreground": "#969896"
 			}
 		},
 		{
-			"name": "Foreground",
 			"scope": "keyword.operator.class, constant.other, source.php.embedded.line",
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#CED1CF"
+				"foreground": "#CED1CF",
+				"fontStyle": ""
 			}
 		},
 		{
-			"name": "Variable, String Link, Regular Expression, Tag Name",
 			"scope": "variable, support.other.variable, string.other.link, string.regexp, entity.name.tag, entity.other.attribute-name, meta.tag, declaration.tag",
 			"settings": {
 				"foreground": "#CC6666"
 			}
 		},
 		{
-			"name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
 			"scope": "constant.numeric, constant.language, support.constant, constant.character, variable.parameter, punctuation.section.embedded, keyword.other.unit",
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#DE935F"
+				"foreground": "#DE935F",
+				"fontStyle": ""
 			}
 		},
 		{
-			"name": "Class, Support",
 			"scope": "entity.name.class, entity.name.type.class, support.type, support.class",
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#F0C674"
+				"foreground": "#F0C674",
+				"fontStyle": ""
 			}
 		},
 		{
-			"name": "String, Symbols, Inherited Class, Markup Heading",
 			"scope": "string, constant.other.symbol, entity.other.inherited-class, markup.heading",
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#B5BD68"
+				"foreground": "#B5BD68",
+				"fontStyle": ""
 			}
 		},
 		{
-			"name": "Operator, Misc",
 			"scope": "keyword.operator, constant.other.color",
 			"settings": {
 				"foreground": "#8ABEB7"
 			}
 		},
 		{
-			"name": "Function, Special Method, Block Level",
 			"scope": "entity.name.function, meta.function-call, support.function, keyword.other.special-method, meta.block-level",
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#81A2BE"
+				"foreground": "#81A2BE",
+				"fontStyle": ""
 			}
 		},
 		{
-			"name": "Keyword, Storage",
 			"scope": "keyword, storage, storage.type, entity.name.tag.css",
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#B294BB"
+				"foreground": "#B294BB",
+				"fontStyle": ""
 			}
 		},
 		{
-			"name": "Invalid",
 			"scope": "invalid",
 			"settings": {
+				"foreground": "#CED2CF",
 				"background": "#DF5F5F",
-				"fontStyle": "",
-				"foreground": "#CED2CF"
+				"fontStyle": ""
 			}
 		},
 		{
-			"name": "Separator",
 			"scope": "meta.separator",
 			"settings": {
-				"background": "#82A3BF",
-				"foreground": "#CED2CF"
+				"foreground": "#CED2CF",
+				"background": "#82A3BF"
 			}
 		},
 		{
-			"name": "Deprecated",
 			"scope": "invalid.deprecated",
 			"settings": {
+				"foreground": "#CED2CF",
 				"background": "#B798BF",
-				"fontStyle": "",
-				"foreground": "#CED2CF"
+				"fontStyle": ""
 			}
 		},
 		{
 			"scope": "token.info-token",
 			"settings": {
-				"foreground": "#6796e6"
+				"foreground": "#6796E6"
 			}
 		},
 		{
 			"scope": "token.warn-token",
 			"settings": {
-				"foreground": "#cd9731"
+				"foreground": "#CD9731"
 			}
 		},
 		{
 			"scope": "token.error-token",
 			"settings": {
-				"foreground": "#f44747"
+				"foreground": "#F44747"
 			}
 		},
 		{
 			"scope": "token.debug-token",
 			"settings": {
-				"foreground": "#b267e6"
+				"foreground": "#B267E6"
 			}
 		}
 	],
+	*/
 	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
 	"editor.suggestSelection": "first",
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -391,13 +381,6 @@
 	"window.zoomLevel": 0,
 	"workbench.statusBar.visible": true,
 	"git.autofetch": true,
-	"python.jediEnabled": false,
-	"gitlens.codeLens.enabled": false,
-	"gitlens.views.repositories.location": "scm",
-	"gitlens.views.fileHistory.location": "scm",
-	"gitlens.views.lineHistory.location": "scm",
-	"gitlens.views.compare.location": "scm",
-	"gitlens.views.search.location": "scm",
 	"git.confirmSync": false,
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.python",
