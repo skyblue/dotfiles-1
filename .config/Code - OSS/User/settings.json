@@ -1,4 +1,7 @@
 {
+	"window.menuBarVisibility": "toggle",
+	"window.newWindowDimensions": "maximized",
+	// "window.titleBarStyle": "custom",
 	"workbench.iconTheme": "material-icon-theme",
 	/*
 	"workbench.colorTheme": "Nord",
@@ -377,11 +380,10 @@
 		"textPreformat.foreground": "#d7ba7d",  // #d7ba7d
 		"textSeparator.foreground": "#ffffff2e",  // #ffffff2e
 		"tree.indentGuidesStroke": "#585858",  // #585858
-		"widget.shadow": "#000000"
+		"widget.shadow": "#000000"  // #000000
 	},
 	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
 	"editor.suggestSelection": "first",
-	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"files.autoSave": "afterDelay",
 	"git.ignoreMissingGitWarning": true,
 	"files.exclude": {
@@ -395,18 +397,9 @@
 	"workbench.statusBar.visible": true,
 	"git.autofetch": true,
 	"git.confirmSync": false,
-	"[python]": {
-		"editor.defaultFormatter": "ms-python.python",
-		"python.formatting.provider": "black",
-		"python.formatting.blackArgs": [
-			"--line-length",
-			"79"
-		],
-	},
 	"diffEditor.ignoreTrimWhitespace": false,
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"window.titleBarStyle": "custom",
 	"git.enableSmartCommit": true,
 }
