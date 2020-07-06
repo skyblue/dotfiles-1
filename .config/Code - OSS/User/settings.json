@@ -402,4 +402,5 @@
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"git.enableSmartCommit": true,
+	"explorer.confirmDragAndDrop": false,
 }

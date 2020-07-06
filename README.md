@@ -35,7 +35,7 @@
 | System | Shortcut |
 |---|---|
 | **Navigation** |
-| Hide all normal windows | Super+D |
+| Hide all normal windows | Super+Shift+K |
 | Move to workspace above | Super+P |
 | Move to workspace below | Super+; |
 | Move window one monitor down | Super+Alt+K |
@@ -69,6 +69,7 @@
 | **System** |
 | Lock screen | Super+Backspace |
 | Log out | Super+Alt+Backspace |
+| Show all applications | Super+D |
 
 ## Wallpapers
 
