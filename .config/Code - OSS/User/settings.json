@@ -404,4 +404,6 @@
 	},
 	"git.enableSmartCommit": true,
 	"explorer.confirmDragAndDrop": false,
+	"editor.renderWhitespace": "boundary",
+	"files.trimTrailingWhitespace": true,
 }
