@@ -20,10 +20,9 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 HISTFILE=~/.zhistory
 HISTSIZE=1000
 SAVEHIST=500
-export EDITOR=/usr/bin/nano
+export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/code
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
-
 
 ## Keybindings section
 bindkey -e
@@ -58,6 +57,14 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias p="sudo pacman"
+alias v="vim"
+alias sv="sudo vim"
+alias r="ranger"
+alias sr="sudo ranger"
+alias yt="youtube-dl"
+alias ls="ls --color=auto --format=horizontal --group-directories-first"
+alias lsa="ls --color=auto --format=horizontal --group-directories-first -A -h"
 
 # Theming section
 autoload -U compinit colors zcalc
@@ -200,7 +207,6 @@ esac
 # ufetch-manjaro - tiny system info for manjaro
 
 ## INFO
-
 # user is already defined
 host="$(hostname)"
 os='Manjaro'
@@ -252,3 +258,4 @@ ${c0}  ████  ████  ████  ${lc}PACKAGES:  ${ic}${packages
 ${c0}  ████  ████  ████  ${lc}SHELL:     ${ic}${shell}${reset}
 ${c0}  ████  ████  ████  ${lc}${envtype}:        ${ic}${WM}${reset}
 EOF
+
