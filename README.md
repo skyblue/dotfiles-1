@@ -2,13 +2,13 @@
 
 |  |  |
 |---|---|
-| Distro   | Manjaro Linux x86_64 | |
-| DE | GNOME Shell | |
-| WM | Mutter | |
-| WM Theme | [Matcha-dark-azul](https://github.com/vinceliuice/Matcha-gtk-theme) |   |
-| Shell Theme | [Matcha-dark-azul](https://github.com/vinceliuice/Matcha-gtk-theme) \[GTK2/3\] |   |
-| Icons | [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) \[GTK2/3\] |   |
-| Cursor | Xcursor-breeze-snow |   |
+| Distro | Manjaro Linux x86_64 |
+| DE | GNOME Shell |
+| WM | Mutter |
+| WM Theme | [Matcha-dark-azul](https://github.com/vinceliuice/Matcha-gtk-theme) |
+| Shell Theme | [Matcha-dark-azul](https://github.com/vinceliuice/Matcha-gtk-theme) \[GTK2/3\] |
+| Icons | [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) \[GTK2/3\] |
+| Cursor | Xcursor-breeze-snow |
 | Terminal | [Alacritty](https://github.com/alacritty/alacritty) |
 | Terminal Theme | [nord](https://github.com/eendroroy/alacritty-theme) |
 | File | [Nautilus](https://github.com/GNOME/nautilus) |
