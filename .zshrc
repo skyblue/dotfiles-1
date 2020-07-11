@@ -12,16 +12,18 @@ setopt autocd                                                   # if only direct
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true                              # automatically find new executables in path 
+zstyle ':completion:*' rehash true                              # automatically find new executables in path
 # Speed up completions
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 HISTFILE=~/.zhistory
-HISTSIZE=1000
-SAVEHIST=500
+HISTSIZE=10000
+SAVEHIST=10000
+
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/code
+
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 ## Keybindings section
@@ -51,20 +53,30 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-## Alias section 
+## Alias section
 alias cp="cp -i"                                                # Confirm before overwriting something
-alias df='df -h'                                                # Human-readable sizes
-alias free='free -m'                                            # Show sizes in MB
-alias gitu='git add . && git commit && git push'
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-alias p="sudo pacman"
-alias v="vim"
-alias sv="sudo vim"
-alias r="ranger"
-alias sr="sudo ranger"
-alias yt="youtube-dl"
-alias ls="ls --color=auto --format=horizontal --group-directories-first"
-alias lsa="ls --color=auto --format=horizontal --group-directories-first -A -h"
+alias df="df -h"                                                # Human-readable sizes
+alias free="free -m"                                            # Show sizes in MB
+alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"  # Manage dotfiles
+alias p="sudo pacman"                                           #
+alias v="$EDITOR"                                               #
+alias sv="sudo $EDITOR"                                         #
+alias c="$VISUAL"                                               # Open visual editor
+alias cf="$VISUAL ."                                            # Visual editor in current folder
+alias r="ranger"                                                #
+alias sr="sudo ranger"                                          #
+alias yt="youtube-dl"                                           # Download videos or music
+alias ls="ls --color=auto --format=horizontal --group-directories-first"  # Better ls
+alias lsa="ls -A -h --color=auto --format=horizontal --group-directories-first"  # Better ls -A
+alias ga="git add"                                              #
+alias gaa="git add all"                                         #
+alias gp="git push"                                             #
+alias gs="git status"                                           #
+alias gd="git diff"                                             #
+alias gc="git commit -m"                                        #
+alias gpu="git pull"                                            #
+alias gcl="git clone"                                           #
+
 
 # Theming section
 autoload -U compinit colors zcalc
@@ -74,12 +86,16 @@ colors
 # enable substitution for prompt
 setopt prompt_subst
 
-# Prompt (on left side) similar to default bash prompt, or redhat zsh prompt with colors
- #PROMPT="%(!.%{$fg[red]%}[%n@%m %1~]%{$reset_color%}# .%{$fg[green]%}[%n@%m %1~]%{$reset_color%}$ "
-# Maia prompt
-PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
+
 # Print a greeting message when shell is started
 echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
+source .ufetch  # Print ufetch
+
+# Prompt (on left side) similar to default bash prompt, or redhat zsh prompt with colors
+# PROMPT="%(!.%{$fg[red]%}[%n@%m %1~]%{$reset_color%}# .%{$fg[green]%}[%n@%m %1~]%{$reset_color%}$ "
+# Maia prompt
+PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
+
 ## Prompt on right side:
 #  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
 #  - shows exit status of previous command (if previous command finished with an error)
@@ -133,16 +149,16 @@ parse_git_state() {
 
 git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  
+
   # If inside a Git repository, print its branch and state
   [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
-  
+
   # If not inside the Git repo, print exit codes of last command (only if it failed)
   [ ! -n "$git_where" ] && echo "%{$fg[red]%} %(?..[%?])"
 }
 
 # Right prompt with exit status of previous command if not successful
- #RPROMPT="%{$fg[red]%} %(?..[%?])" 
+ #RPROMPT="%{$fg[red]%} %(?..[%?])"
 # Right prompt with exit status of previous command marked with ✓ or ✗
  #RPROMPT="%(?.%{$fg[green]%}✓ %{$reset_color%}.%{$fg[red]%}✗ %{$reset_color%})"
 
@@ -167,95 +183,38 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey '^[[A' history-substring-search-up			
+bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Apply different settigns for different terminals
 case $(basename "$(cat "/proc/$PPID/comm")") in
   login)
-    	RPROMPT="%{$fg[red]%} %(?..[%?])" 
-    	alias x='startx ~/.xinitrc'      # Type name of desired desktop after x, xinitrc is configured for it
+      RPROMPT="%{$fg[red]%} %(?..[%?])"
+      alias x='startx ~/.xinitrc'      # Type name of desired desktop after x, xinitrc is configured for it
     ;;
 #  'tmux: server')
 #        RPROMPT='$(git_prompt_string)'
-#		## Base16 Shell color themes.
-#		#possible themes: 3024, apathy, ashes, atelierdune, atelierforest, atelierhearth,
-#		#atelierseaside, bespin, brewer, chalk, codeschool, colors, default, eighties, 
-#		#embers, flat, google, grayscale, greenscreen, harmonic16, isotope, londontube,
-#		#marrakesh, mocha, monokai, ocean, paraiso, pop (dark only), railscasts, shapesifter,
-#		#solarized, summerfruit, tomorrow, twilight
-#		#theme="eighties"
-#		#Possible variants: dark and light
-#		#shade="dark"
-#		#BASE16_SHELL="/usr/share/zsh/scripts/base16-shell/base16-$theme.$shade.sh"
-#		#[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-#		# Use autosuggestion
-#		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#		ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-#  		ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+#    ## Base16 Shell color themes.
+#    #possible themes: 3024, apathy, ashes, atelierdune, atelierforest, atelierhearth,
+#    #atelierseaside, bespin, brewer, chalk, codeschool, colors, default, eighties,
+#    #embers, flat, google, grayscale, greenscreen, harmonic16, isotope, londontube,
+#    #marrakesh, mocha, monokai, ocean, paraiso, pop (dark only), railscasts, shapesifter,
+#    #solarized, summerfruit, tomorrow, twilight
+#    #theme="eighties"
+#    #Possible variants: dark and light
+#    #shade="dark"
+#    #BASE16_SHELL="/usr/share/zsh/scripts/base16-shell/base16-$theme.$shade.sh"
+#    #[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+#    # Use autosuggestion
+#    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#    ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+#      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 #     ;;
   *)
         RPROMPT='$(git_prompt_string)'
-		# Use autosuggestion
-		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-		ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-  		ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+    # Use autosuggestion
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
     ;;
 esac
-
-
-# ufetch-manjaro - tiny system info for manjaro
-
-## INFO
-# user is already defined
-host="$(hostname)"
-os='Manjaro'
-kernel="$(uname -sr)"
-uptime="$(uptime -p | sed 's/up //')"
-packages="$(pacman -Q | wc -l)"
-shell="$(basename ${SHELL})"
-
-if [ -z "${WM}" ]; then
-    if [ "${XDG_CURRENT_DESKTOP}" ]; then
-        envtype='DE'
-        WM="${XDG_CURRENT_DESKTOP}"
-    elif [ "${DESKTOP_SESSION}" ]; then
-        envtype='DE'
-        WM="${DESKTOP_SESSION}"
-    else
-        envtype='WM'
-        WM="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
-    fi
-else
-    envtype='WM'
-fi
-
-## DEFINE COLORS
-bold="$(tput bold)"
-black="$(tput setaf 0)"
-red="$(tput setaf 1)"
-green="$(tput setaf 2)"
-yellow="$(tput setaf 3)"
-blue="$(tput setaf 4)"
-magenta="$(tput setaf 5)"
-cyan="$(tput setaf 6)"
-white="$(tput setaf 7)"
-reset="$(tput sgr0)"
-
-lc="${reset}${bold}${green}"    # labels
-nc="${reset}${bold}${green}"    # user and hostname
-ic="${reset}${bold}${white}"    # info
-c0="${reset}${green}"           # first color
-
-## OUTPUT
-
-cat <<EOF
-${c0}  ██████████  ████  ${nc}${USER}${ic}@${nc}${host}${reset}
-${c0}  ██████████  ████  ${lc}OS:        ${ic}${os}${reset}
-${c0}  ████        ████  ${lc}KERNEL:    ${ic}${kernel}${reset}
-${c0}  ████  ████  ████  ${lc}UPTIME:    ${ic}${uptime}${reset}
-${c0}  ████  ████  ████  ${lc}PACKAGES:  ${ic}${packages}${reset}
-${c0}  ████  ████  ████  ${lc}SHELL:     ${ic}${shell}${reset}
-${c0}  ████  ████  ████  ${lc}${envtype}:        ${ic}${WM}${reset}
-EOF
-

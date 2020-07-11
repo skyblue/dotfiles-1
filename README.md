@@ -84,11 +84,11 @@ For wide screen
 
 ## Setup git bare
 
-`mkdir dotfiles`
+`mkdir .dotfiles`
 
-`git init --bare $HOME/dotfiles`
+`git init --bare $HOME/.dotfiles`
 
-Add the following to you shell dotfile: `alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'`
+Add the following to you shell dotfile: `alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
 
 `config config --local status.showUntrackedFiles no`
 
