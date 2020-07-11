@@ -2,7 +2,7 @@ schemes:
 
   tango_dark: &tango_dark
     primary:
-      background: '0x2e3436'
+      background: '0x1b1b1b'
       foreground: '0xd3d7cf'
     normal:
       black: '0x2e3436'
@@ -23,5 +23,28 @@ schemes:
       cyan: '0x34e2e2'
       white: '0xeeeeec'
 
+  material_600: &material_600
+    primary:
+      background: '0x1b1b1b'
+      foreground: '0xd3d7cf'
+    normal:
+      black: '0x424242'
+      red: '0xe53935'
+      green: '0x43a047'
+      yellow: '0xfdd835'
+      blue: '0x3949ab'
+      magenta: '0x8e24aa'
+      cyan: '0x00acc1'
+      white: '0xbdbdbd'
+    bright:
+      black: '0x6d6d6d'
+      red: '0xff6f60'
+      green: '0x76d275'
+      yellow: '0xffff6b'
+      blue: '0x6f74dd'
+      magenta: '0xc158dc'
+      cyan: '0x5ddef4'
+      white: '0xefefef'
 
-colors: *tango_dark
+
+colors: *material_600
