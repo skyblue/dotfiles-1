@@ -1,3 +1,14 @@
+
+#  ____   ___  _  _
+# |___ \ / _ \| || |
+#   __) | | | | || |_
+#  / __/| |_| |__   _|
+# |_____|\___/   |_|
+#
+# ~/.zshrc
+# https://github.com/2O4
+#
+
 ## Options section
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
@@ -21,8 +32,8 @@ HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
 
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/code
+export EDITOR="vim"
+export VISUAL="code"
 
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
@@ -67,7 +78,7 @@ alias r="ranger"                                                #
 alias sr="sudo ranger"                                          #
 alias yt="youtube-dl"                                           # Download videos or music
 alias ls="ls --color=auto --format=horizontal --group-directories-first"  # Better ls
-alias lsa="ls -A -h --color=auto --format=horizontal --group-directories-first"  # Better ls -A
+alias la="ls -A -h --color=auto --format=horizontal --group-directories-first"  # Better ls -A
 alias ga="git add"                                              #
 alias gaa="git add all"                                         #
 alias gp="git push"                                             #
