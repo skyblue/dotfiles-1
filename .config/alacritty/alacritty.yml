@@ -1,3 +1,12 @@
+
+window:
+  dimensions:
+    columns: 100
+    lines: 30 
+
+  decorations: none
+
+
 schemes:
 
   tango_dark: &tango_dark
