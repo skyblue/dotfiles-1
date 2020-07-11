@@ -66,8 +66,8 @@ quit                  = Q
 
 # Menu and interface control keys:
 go                    = ENTER
-menu_down             = k
-menu_up               = i
+menu_down             = j 
+menu_up               = k 
 menu_page_down        = ;
 menu_page_up          = p
 menu_first_item       = [
@@ -82,13 +82,13 @@ toggle_hidden_files   = H
 next_search           = ^g ^n
 show_lyrics           = L
 theme_menu            = T
-help                  = h ?
+help                  = ?
 refresh               = ^r
 reload                = r
 
 # Audio playing and positioning keys:
 seek_forward          = l
-seek_backward         = j
+seek_backward         = h
 seek_forward_fast     = 
 seek_backward_fast    = 
 pause                 = o SPACE
