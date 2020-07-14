@@ -9,7 +9,18 @@
 # https://github.com/2O4
 #
 
-## Options section
+#------------------------------
+# Variables
+#------------------------------
+export EDITOR="nvim"
+export VISUAL="code"
+export BROWSER="brave"
+export PATH="${PATH}:${HOME}/.in"
+export GOPATH="$HOME/go"
+
+#------------------------------
+# Options
+#------------------------------
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
@@ -20,7 +31,14 @@ setopt nobeep                                                   # No beep
 setopt appendhistory                                            # Immediately append history instead of overwriting
 setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
 setopt autocd                                                   # if only directory path is entered, cd there.
+autoload -U zcalc
 
+#------------------------------
+# Completion
+#------------------------------
+autoload -U compinit
+compinit -d
+zstyle ':completion:*' menu yes select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' rehash true                              # automatically find new executables in path
@@ -28,16 +46,19 @@ zstyle ':completion:*' rehash true                              # automatically 
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
-HISTFILE=~/.zhistory
-HISTSIZE=10000
-SAVEHIST=10000
-
-export EDITOR="vim"
-export VISUAL="code"
-
+zstyle ':completion:*:kill:*' force-list always
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
-## Keybindings section
+#------------------------------
+# History
+#------------------------------
+HISTFILE=~/.zhistory
+HISTSIZE=1000
+SAVEHIST=1000
+
+#------------------------------
+# Keybindings
+#------------------------------
 bindkey -e
 bindkey '^[[7~' beginning-of-line                               # Home key
 bindkey '^[[H' beginning-of-line                                # Home key
@@ -64,7 +85,9 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-## Alias section
+#------------------------------
+# Alias
+#------------------------------
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df="df -h"                                                # Human-readable sizes
 alias free="free -m"                                            # Show sizes in MB
@@ -77,11 +100,14 @@ alias cf="$VISUAL ."                                            # Visual editor 
 alias r="ranger"                                                #
 alias sr="sudo ranger"                                          #
 alias yt="youtube-dl"                                           # Download videos or music
-alias ls="ls --color=auto --format=horizontal --group-directories-first"  # ls
-alias la="ls -A -h --color=auto --format=horizontal --group-directories-first"  # ls -A
-alias ll="ls -A -h -l --color=auto --group-directories-first"   # ls -l
+
+alias ls="ls --color=auto --group-directories-first"            # ls
+alias la="ls -A --color=auto --group-directories-first"         # ls -A
+alias ll="ls -lAh --color=auto --group-directories-first"       # ls -l
+
+alias g="git"                                                   # Git
 alias ga="git add"                                              #
-alias gaa="git add all"                                         #
+alias gaa="git add *"                                           #
 alias gp="git push"                                             #
 alias gs="git status"                                           #
 alias gd="git diff"                                             #
@@ -89,29 +115,29 @@ alias gc="git commit -m"                                        #
 alias gpu="git pull"                                            #
 alias gcl="git clone"                                           #
 
-
-# Theming section
-autoload -U compinit colors zcalc
-compinit -d
+#------------------------------
+# Prompt
+#------------------------------
+autoload -U colors
 colors
+setopt prompt_subst                                             # enable substitution for prompt
+echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)             # Print a greeting message when shell is started
+source .ufetch                                                  # Print ufetch
 
-# enable substitution for prompt
-setopt prompt_subst
-
-
-# Print a greeting message when shell is started
-echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
-source .ufetch  # Print ufetch
-
+#------------------------------
+# Left side prompt
+#------------------------------
 # Prompt (on left side) similar to default bash prompt, or redhat zsh prompt with colors
 # PROMPT="%(!.%{$fg[red]%}[%n@%m %1~]%{$reset_color%}# .%{$fg[green]%}[%n@%m %1~]%{$reset_color%}$ "
 # Maia prompt
-PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
+PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b "
 
-## Prompt on right side:
-#  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
-#  - shows exit status of previous command (if previous command finished with an error)
-#  - is invisible, if neither is the case
+#------------------------------
+# Right side prompt
+#------------------------------
+# - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
+# - shows exit status of previous command (if previous command finished with an error)
+# - is invisible, if neither is the case
 
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"                              # plus/minus     - clean repo
@@ -170,10 +196,9 @@ git_prompt_string() {
 }
 
 # Right prompt with exit status of previous command if not successful
- #RPROMPT="%{$fg[red]%} %(?..[%?])"
+# RPROMPT="%{$fg[red]%} %(?..[%?])"
 # Right prompt with exit status of previous command marked with ✓ or ✗
- #RPROMPT="%(?.%{$fg[green]%}✓ %{$reset_color%}.%{$fg[red]%}✗ %{$reset_color%})"
-
+# RPROMPT="%(?.%{$fg[green]%}✓ %{$reset_color%}.%{$fg[red]%}✗ %{$reset_color%})"
 
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
@@ -185,12 +210,15 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
 
-
-## Plugins section: Enable fish style features
+#------------------------------
+# Plugins: Enable fish style features
+#------------------------------
 # Use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Use history substring search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
