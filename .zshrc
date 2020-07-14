@@ -77,8 +77,9 @@ alias cf="$VISUAL ."                                            # Visual editor 
 alias r="ranger"                                                #
 alias sr="sudo ranger"                                          #
 alias yt="youtube-dl"                                           # Download videos or music
-alias ls="ls --color=auto --format=horizontal --group-directories-first"  # Better ls
-alias la="ls -A -h --color=auto --format=horizontal --group-directories-first"  # Better ls -A
+alias ls="ls --color=auto --format=horizontal --group-directories-first"  # ls
+alias la="ls -A -h --color=auto --format=horizontal --group-directories-first"  # ls -A
+alias ll="ls -A -h -l --color=auto --group-directories-first"   # ls -l
 alias ga="git add"                                              #
 alias gaa="git add all"                                         #
 alias gp="git push"                                             #

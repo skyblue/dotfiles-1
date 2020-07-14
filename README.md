@@ -10,7 +10,7 @@
 | Icons | [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) \[GTK2/3\] |
 | Cursor | Xcursor-breeze-snow |
 | Terminal | [Alacritty](https://github.com/alacritty/alacritty) |
-| Terminal Theme | [nord](https://github.com/eendroroy/alacritty-theme) |
+| Terminal Theme | [custom](.config/alacritty/alacritty.yml) |
 | File | [Nautilus](https://github.com/GNOME/nautilus) |
 | **Porgrams** |  |
 | Editor | [Code - OSS](https://code.visualstudio.com/), [Vim](https://github.com/vim/vim) |
@@ -35,11 +35,11 @@
 | System | Shortcut |
 |---|---|
 | **Navigation** |
-| Hide all normal windows | Super+Shift+K |
+| Hide all normal windows | Super+Shift+J |
 | Move to workspace above | Super+P |
 | Move to workspace below | Super+; |
-| Move window one monitor down | Super+Alt+K |
-| Move window one monitor to the left | Super+Alt+J |
+| Move window one monitor down | Super+Alt+J |
+| Move window one monitor to the left | Super+Alt+H |
 | Move window one monitor to the right | Super+Alt+L |
 | Move window one workspace down | Super+Alt+; |
 | Move window one workspace up | Super+Alt+P |
