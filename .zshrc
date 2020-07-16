@@ -48,6 +48,7 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 zstyle ':completion:*:kill:*' force-list always
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
+_comp_options+=(globdots)					# Include hidden files
 
 #------------------------------
 # History
