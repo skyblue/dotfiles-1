@@ -13,7 +13,7 @@
 # Variables
 #------------------------------
 export EDITOR="nvim"
-export VISUAL="code"
+export VISUAL="nvim"
 export BROWSER="brave"
 export PATH="${PATH}:${HOME}/.in"
 export GOPATH="$HOME/go"
@@ -48,7 +48,7 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 zstyle ':completion:*:kill:*' force-list always
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
-_comp_options+=(globdots)					# Include hidden files
+_comp_options+=(globdots)                                       # Include hidden files
 
 #------------------------------
 # History
@@ -85,6 +85,11 @@ bindkey '^[[1;5D' backward-word                                 #
 bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
+
+bindkey '^k' cd_up                                              # cd ..
+bindkey '^g' git_prepare                                        # git add, commit, push
+bindkey '^h' git_root                                           # git root
+bindkey '^l' la_current                                         # la
 
 #------------------------------
 # Alias
@@ -210,6 +215,40 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
+
+#------------------------------
+# Functions
+#------------------------------
+function cd_up() {
+	BUFFER="cd .."
+	zle accept-line
+}
+zle -N cd_up
+
+function la_current() {
+	BUFFER="la"
+	zle accept-line
+}
+zle -N la_current
+
+function git_root() {
+	BUFFER="cd $(git rev-parse --show-toplevel || echo ".")"
+	zle accept-line
+}
+zle -N git_root
+
+function git_prepare() {
+	if [ -n "$BUFFER" ];
+	then
+		BUFFER="git add -A && git commit -m \"$BUFFER\" && git push"
+	fi
+	if [ -z "$BUFFER" ];
+	then
+		BUFFER="git add -A && git commit -v && git push"
+	fi
+	zle accept-line
+}
+zle -N git_prepare
 
 #------------------------------
 # Plugins: Enable fish style features
