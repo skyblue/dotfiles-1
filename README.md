@@ -6,14 +6,15 @@
 | DE | GNOME Shell |
 | WM | Mutter |
 | WM Theme | [Matcha-dark-azul](https://github.com/vinceliuice/Matcha-gtk-theme) |
-| Shell Theme | [Matcha-dark-azul](https://github.com/vinceliuice/Matcha-gtk-theme) \[GTK2/3\] |
+| Gnome Shell Theme | [Matcha-dark-azul](https://github.com/vinceliuice/Matcha-gtk-theme) \[GTK2/3\] |
 | Icons | [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) \[GTK2/3\] |
 | Cursor | Xcursor-breeze-snow |
+| Shell | [zsh](https://www.zsh.org/) |
 | Terminal | [Alacritty](https://github.com/alacritty/alacritty) |
 | Terminal Theme | [custom](.config/alacritty/alacritty.yml) |
 | File | [Nautilus](https://github.com/GNOME/nautilus) |
 | **Porgrams** |  |
-| Editor | [Code - OSS](https://code.visualstudio.com/), [Vim](https://github.com/vim/vim) |
+| Editor | [Code - OSS](https://code.visualstudio.com/), [NeoVim](https://github.com/neovim/neovim) |
 | Web | [Brave](https://brave.com/) |
 | Video | [VLC](https://www.videolan.org/vlc/) |
 | Music | [MOC](https://wiki.archlinux.org/index.php/MOC), [VLC](https://www.videolan.org/vlc/) |

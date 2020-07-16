@@ -89,7 +89,7 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 bindkey '^k' cd_up                                              # cd ..
 bindkey '^g' git_prepare                                        # git add, commit, push
 bindkey '^h' git_root                                           # git root
-bindkey '^l' la_current                                         # la
+bindkey '^j' la_current                                         # la
 
 #------------------------------
 # Alias
@@ -101,11 +101,9 @@ alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"  # Manage dotfile
 alias p="sudo pacman"                                           #
 alias v="$EDITOR"                                               #
 alias sv="sudo $EDITOR"                                         #
-alias c="$VISUAL"                                               # Open visual editor
-alias cf="$VISUAL ."                                            # Visual editor in current folder
 alias r="ranger"                                                #
 alias sr="sudo ranger"                                          #
-alias yt="youtube-dl"                                           # Download videos or music
+alias y="youtube-dl"                                            # Download videos or music
 
 alias ls="ls --color=auto --group-directories-first"            # ls
 alias la="ls -A --color=auto --group-directories-first"         # ls -A
@@ -113,7 +111,7 @@ alias ll="ls -lAh --color=auto --group-directories-first"       # ls -l
 
 alias g="git"                                                   # Git
 alias ga="git add"                                              #
-alias gaa="git add *"                                           #
+alias gaa="git add -A"                                          #
 alias gp="git push"                                             #
 alias gs="git status"                                           #
 alias gd="git diff"                                             #
