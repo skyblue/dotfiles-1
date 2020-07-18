@@ -105,19 +105,17 @@ alias r="ranger"                                                #
 alias sr="sudo ranger"                                          #
 alias y="youtube-dl"                                            # Download videos or music
 
-alias ls="ls --color=auto --group-directories-first"            # ls
-alias la="ls -A --color=auto --group-directories-first"         # ls -A
-alias ll="ls -lAh --color=auto --group-directories-first"       # ls -l
+alias ls="ls --color=auto"                                      # ls
+alias la="ls -A --color=auto"                                   # ls -A
+alias ll="ls -lAh --color=auto"                                 # ls -l
 
 alias g="git"                                                   # Git
 alias ga="git add"                                              #
 alias gaa="git add -A"                                          #
 alias gp="git push"                                             #
 alias gs="git status"                                           #
-alias gd="git diff"                                             #
 alias gc="git commit -m"                                        #
 alias gpu="git pull"                                            #
-alias gcl="git clone"                                           #
 
 #------------------------------
 # Prompt
