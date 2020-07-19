@@ -103,7 +103,7 @@ alias v="$EDITOR"                                               #
 alias sv="sudo $EDITOR"                                         #
 alias r="ranger"                                                #
 alias sr="sudo ranger"                                          #
-alias y="youtube-dl"                                            # Download videos or music
+alias y="youtube-dl -i -x --audio-format best"                  # Download videos or music
 
 alias ls="ls --color=auto"                                      # ls
 alias la="ls -A --color=auto"                                   # ls -A
@@ -294,3 +294,4 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
     ;;
 esac
+
