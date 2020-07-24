@@ -15,7 +15,7 @@
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="brave"
-export PATH="${PATH}:${HOME}/.in"
+export PATH="${PATH}:${HOME}/.bin"
 export GOPATH="$HOME/go"
 
 #------------------------------
