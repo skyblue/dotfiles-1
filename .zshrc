@@ -103,7 +103,8 @@ alias v="$EDITOR"                                               #
 alias sv="sudo $EDITOR"                                         #
 alias r="ranger"                                                #
 alias sr="sudo ranger"                                          #
-alias y="youtube-dl -i -x --audio-format best"                  # Download videos or music
+alias y="youtube-dl -i -x --audio-format best"                  # Download musics
+alias yd="youtube-dl"                                           # Download videos
 
 alias ls="ls --color=auto"                                      # ls
 alias la="ls -A --color=auto"                                   # ls -A
