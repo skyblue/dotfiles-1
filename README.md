@@ -49,10 +49,10 @@
 | Switch to workspace 2 | Super+] |
 | **Windows** |
 | Close window | Super+W |
-| Hide window | Super+K |
-| Toggle fulscreen mode | Super+Alt+I |
-| Toggle maximization state | Super+I |
-| View split on left | Super+J |
+| Hide window | Super+J |
+| Toggle fulscreen mode | Super+Alt+K |
+| Toggle maximization state | Super+K |
+| View split on left | Super+H |
 | View split on right | Super+L |
 | **Launchers** |
 | Launch terminal | Super+Return Super+1 |
