@@ -108,7 +108,11 @@ alias yd="youtube-dl"                                           # Download video
 
 alias ls="ls --color=auto"                                      # ls
 alias la="ls -A --color=auto"                                   # ls -A
-alias ll="ls -lAh --color=auto"                                 # ls -l
+alias ll="ls -lahF --color=auto"                                # ls -l
+
+alias grep="grep --color=auto"                                  #
+alias egrep="egrep --color=auto"                                #
+alias fgrep="fgrep --color=auto"                                #
 
 alias g="git"                                                   # Git
 alias ga="git add"                                              #
