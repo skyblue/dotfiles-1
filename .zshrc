@@ -106,6 +106,7 @@ alias sr="sudo ranger"                                          #
 alias y="youtube-dl -i -x --audio-format best"                  # Download musics
 alias yd="youtube-dl"                                           # Download videos
 
+alias l="ls --color=auto"                                       # ls
 alias ls="ls --color=auto"                                      # ls
 alias la="ls -A --color=auto"                                   # ls -A
 alias ll="ls -lahF --color=auto"                                # ls -l
