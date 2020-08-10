@@ -31,7 +31,13 @@ setopt nobeep                                                   # No beep
 setopt appendhistory                                            # Immediately append history instead of overwriting
 setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
 setopt autocd                                                   # if only directory path is entered, cd there.
+
+#------------------------------
+# Load
+#------------------------------
 autoload -U zcalc
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook                 # cdr allows you to change the working directory to a previous working directory from a list maintained automatically
+add-zsh-hook chpwd chpwd_recent_dirs
 
 #------------------------------
 # Completion
@@ -49,6 +55,7 @@ zstyle ':completion:*' cache-path ~/.config/zsh/cache
 zstyle ':completion:*:kill:*' force-list always
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 _comp_options+=(globdots)                                       # Include hidden files
+zstyle ':completion:*:*:cdr:*:*' menu selection                 # completion for cdr
 
 #------------------------------
 # History
