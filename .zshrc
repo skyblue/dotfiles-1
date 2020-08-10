@@ -130,7 +130,6 @@ autoload -U colors
 colors
 setopt prompt_subst                                             # enable substitution for prompt
 echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)             # Print a greeting message when shell is started
-source .ufetch                                                  # Print ufetch
 
 #------------------------------
 # Left side prompt
@@ -300,4 +299,9 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
     ;;
 esac
+
+# Load local config file
+if [ -f ".zshrc_local" ]; then
+  source .zshrc_local
+fi
 
