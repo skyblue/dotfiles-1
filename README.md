@@ -93,6 +93,11 @@ Add the following to you shell dotfile: `alias config='/usr/bin/git --git-dir=$H
 
 `config config --local status.showUntrackedFiles no`
 
+## Set up custom configs path
+inside `.zshrc` localy put
+`source ~/.config/zsh/zshrc`
+this file allow custom settings localy
+
 ## To use it
 
 `config add /path/to/file`
