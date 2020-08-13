@@ -85,13 +85,12 @@ For wide screen
 
 ## Setup git bare
 
-`mkdir .dotfiles`
+```mkdir .dotfiles && git init --bare $HOME/.dotfiles && echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> .bashrc```
 
-`git init --bare $HOME/.dotfiles`
-
-Add the following to you shell dotfile: `alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
-
-`config config --local status.showUntrackedFiles no`
+Restart bash
+```config config --local status.showUntrackedFiles no```
+```config remote add dotfiles https://github.com/2O4/dotfiles.git```
+```config pull dotfiles master```
 
 ## Set up custom configs path
 inside `.zshrc` localy put
