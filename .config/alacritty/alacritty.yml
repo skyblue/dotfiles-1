@@ -6,6 +6,9 @@ window:
 
   decorations: none
 
+key_bindings:
+    - { key: Return,    mods: Control|Shift, action: SpawnNewInstance }
+    - { key: N,         mods: Alt,           chars: "~"               }
 
 schemes:
 
