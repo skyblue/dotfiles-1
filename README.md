@@ -74,7 +74,7 @@
 
 ## Wallpapers
 
-I do not own the right to the wallpapers iamges.
+I do not own the right to the wallpapers images.
 
 ![](Pictures/Wallpapers/forest.jpg)
 
@@ -103,8 +103,8 @@ config pull dotfiles master
 ```
 
 ## Set up custom configs path
-inside `.zshrc` localy put
-`source ~/.config/zsh/zshrc`
+
+```echo "source ~/.config/zsh/zshrc" > ~/.zshrc```
 this file allow custom settings localy
 
 ## To use it

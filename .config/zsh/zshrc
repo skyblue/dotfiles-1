@@ -95,7 +95,7 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 bindkey '^k' cd_up                                              # cd ..
 bindkey '^g' git_prepare                                        # git add, commit, push
 bindkey '^h' git_root                                           # git root
-bindkey '^j' la_current                                         # la
+bindkey '^j' ll_current                                         # la
 
 #------------------------------
 # Alias
@@ -232,11 +232,11 @@ function cd_up() {
 }
 zle -N cd_up
 
-function la_current() {
-	BUFFER="la"
+function ll_current() {
+	BUFFER="ll"
 	zle accept-line
 }
-zle -N la_current
+zle -N ll_current
 
 function git_root() {
 	BUFFER="cd $(git rev-parse --show-toplevel || echo ".")"
