@@ -15,10 +15,18 @@
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="brave"
-export PATH="${PATH}:${HOME}/.bin"
-# Start tmux on every shell login
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+export PATH="${PATH}:${HOME}/bin"
+
+# TMUX - checks if tmux is installed before trying to launch it
+if which tmux >/dev/null 2>&1; then
+    # if no session is started, start a new session
+    test -z ${TMUX} && tmux
+
+    # when quitting tmux, try to attach
+    while test -z ${TMUX}; do
+        tmux attach || break
+    done
+fi
 
 #------------------------------
 # Options
@@ -131,6 +139,10 @@ alias gp="git push"                                             #
 alias gs="git status"                                           #
 alias gc="git commit -m"                                        #
 alias gpu="git pull"                                            #
+
+# color-ssh is a custom function to change the background color of the terminal
+# based on the ssh connection, source: https://bryangilbert.com/post/etc/term/dynamic-ssh-terminal-background-colors/
+alias ssh="color-ssh"                                           # custom ssh function
 
 #------------------------------
 # Prompt
@@ -259,6 +271,18 @@ function git_prepare() {
 	zle accept-line
 }
 zle -N git_prepare
+
+color-ssh() {
+    trap "colorterm.sh" INT EXIT
+    if [[ "$*" =~ "prod" ]]; then
+        colorterm.sh prod
+    elif [[ "$*" =~ "dev" ]]; then
+        colorterm.sh dev
+    else
+        colorterm.sh other
+    fi
+    ssh $*
+}
 
 #------------------------------
 # Plugins: Enable fish style features
