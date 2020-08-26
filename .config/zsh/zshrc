@@ -142,7 +142,8 @@ alias gpu="git pull"                                            #
 
 # color-ssh is a custom function to change the background color of the terminal
 # based on the ssh connection, source: https://bryangilbert.com/post/etc/term/dynamic-ssh-terminal-background-colors/
-alias ssh="color-ssh"                                           # custom ssh function
+compdef _ssh color-ssh=ssh
+alias ssh=color-ssh                                             # custom ssh function
 
 #------------------------------
 # Prompt
@@ -281,7 +282,7 @@ color-ssh() {
     else
         colorterm.sh other
     fi
-    ssh $*
+    'ssh' $*
 }
 
 #------------------------------
