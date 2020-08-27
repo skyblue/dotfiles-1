@@ -1,6 +1,6 @@
 # dotfiles
 
-![](Pictures/.git/main.png)
+![](Pictures/.keep/main.png)
 
 | Software | used |
 |---|---|
