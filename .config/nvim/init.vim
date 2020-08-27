@@ -17,6 +17,7 @@ set number relativenumber
 set nu rnu
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+highlight LineNr ctermfg=grey
 
 
 " Keybinds

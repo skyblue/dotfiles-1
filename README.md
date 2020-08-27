@@ -15,18 +15,18 @@
 | Terminal Theme | [custom](.config/alacritty/alacritty.yml) |
 | Terminal Multiplexer | [tmux](https://github.com/tmux/tmux) |
 | File | [ranger](https://github.com/ranger/ranger) [Nautilus](https://github.com/GNOME/nautilus) |
-| **Porgrams** |  |
 | Editor | [Code - OSS](https://code.visualstudio.com/), [NeoVim](https://github.com/neovim/neovim) |
 | Web | [Brave](https://brave.com/) |
 
 Web browser customisation:
 [Chrome style - Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
-[Firefox style - Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+/ [Firefox style - Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+<br>Custom CSS:
 [GitHub style - GitHub-Dark](https://github.com/StylishThemes/GitHub-Dark)
-[GitLab style - dark-gitlab](https://gitlab.com/Avinash-Bhat/dark-gitlab)
-[Wikipedia theme - Wikipedia-Dark](https://github.com/StylishThemes/Wikipedia-Dark)
-[Stack Overflow theme - StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark)
-[Protonmail theme](https://github.com/amdelamar/pm-theme)
+, [GitLab style - dark-gitlab](https://gitlab.com/Avinash-Bhat/dark-gitlab)
+, [Wikipedia theme - Wikipedia-Dark](https://github.com/StylishThemes/Wikipedia-Dark)
+, [Stack Overflow theme - StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark)
+, [Protonmail theme](https://github.com/amdelamar/pm-theme)
 
 ## Shortcuts
 
