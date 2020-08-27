@@ -1,8 +1,9 @@
 # dotfiles
 
-|  |  |
+![](Pictures/.git/main.png)
+
+| Software | used |
 |---|---|
-| Distro | Manjaro Linux x86_64 |
 | DE | GNOME Shell |
 | WM | Mutter |
 | WM Theme | [Matcha-dark-azul](https://github.com/vinceliuice/Matcha-gtk-theme) |
@@ -12,24 +13,20 @@
 | Shell | [zsh](https://www.zsh.org/) |
 | Terminal | [Alacritty](https://github.com/alacritty/alacritty) |
 | Terminal Theme | [custom](.config/alacritty/alacritty.yml) |
-| File | [Nautilus](https://github.com/GNOME/nautilus) |
+| Terminal Multiplexer | [tmux](https://github.com/tmux/tmux) |
+| File | [ranger](https://github.com/ranger/ranger) [Nautilus](https://github.com/GNOME/nautilus) |
 | **Porgrams** |  |
 | Editor | [Code - OSS](https://code.visualstudio.com/), [NeoVim](https://github.com/neovim/neovim) |
 | Web | [Brave](https://brave.com/) |
-| Video | [VLC](https://www.videolan.org/vlc/) |
-| Music | [MOC](https://wiki.archlinux.org/index.php/MOC), [VLC](https://www.videolan.org/vlc/) |
-| Calendar | gnome-calendar |
-| System monitoring | [htop](https://github.com/hishamhm/htop) |
-| System infos | [neofetch](https://github.com/dylanaraps/neofetch) |
-| ls | [coloris](https://github.com/athityakumar/colorls) |
-| **Web** |  |
-| Chrome style | [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) |
-| Firefox style | [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) |
-| GitHub style | [GitHub-Dark](https://github.com/StylishThemes/GitHub-Dark) |
-| GitLab style | [dark-gitlab](https://gitlab.com/Avinash-Bhat/dark-gitlab) |
-| Wikipedia theme | [Wikipedia-Dark](https://github.com/StylishThemes/Wikipedia-Dark) |
-| Stack Overflow theme | [StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark) |
-| Protonmail theme | [pm-theme](https://github.com/amdelamar/pm-theme) |
+
+Web browser customisation:
+[Chrome style - Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+[Firefox style - Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+[GitHub style - GitHub-Dark](https://github.com/StylishThemes/GitHub-Dark)
+[GitLab style - dark-gitlab](https://gitlab.com/Avinash-Bhat/dark-gitlab)
+[Wikipedia theme - Wikipedia-Dark](https://github.com/StylishThemes/Wikipedia-Dark)
+[Stack Overflow theme - StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark)
+[Protonmail theme](https://github.com/amdelamar/pm-theme)
 
 ## Shortcuts
 
@@ -104,8 +101,11 @@ config pull dotfiles master
 
 ## Set up custom configs path
 
-```echo "source ~/.config/zsh/zshrc" > ~/.zshrc```
-this file allow custom settings localy
+```
+echo "source ~/.config/zsh/zshrc" > ~/.zshrc
+```
+
+This file allow custom settings localy
 
 ## To use it
 
