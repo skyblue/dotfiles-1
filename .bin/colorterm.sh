@@ -3,6 +3,8 @@
 #
 # author: Bryan Gilbert
 # source: https://bryangilbert.com/post/etc/term/dynamic-ssh-terminal-background-colors/
+# 
+# modifications: bg set to default when exiting, and 'exit 0' to stop the script 
 #
 
 if [[ "$TERM" = "tmux"* ]] && [[ -n "$TMUX" ]]; then
@@ -13,7 +15,7 @@ if [[ "$TERM" = "tmux"* ]] && [[ -n "$TMUX" ]]; then
   elif [ "$1" == "other" ]; then
     tmux select-pane -P 'bg=#253320';
   else
-    tmux select-pane -P 'bg=#1b1b1b';
+    tmux select-pane -P 'bg=default';
   fi;
 else
   if [ "$1" == "prod" ]; then
