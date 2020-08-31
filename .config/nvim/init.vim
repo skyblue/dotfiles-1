@@ -3,7 +3,7 @@ syntax on
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-set expandtab
+set expandtab                           "spaces instead of tabs
 set smartindent
 set nu
 set nowrap
@@ -43,9 +43,12 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " air-line
-let g:airline_theme='bubblegum'
+let g:airline_theme='custom'
 
 let g:airline_powerline_fonts = 1
+
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#formatter = 'default'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
