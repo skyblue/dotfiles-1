@@ -17,6 +17,7 @@
 | File | [ranger](https://github.com/ranger/ranger) [Nautilus](https://github.com/GNOME/nautilus) |
 | Editor | [Code - OSS](https://code.visualstudio.com/), [NeoVim](https://github.com/neovim/neovim) |
 | Web | [Brave](https://brave.com/) |
+| Font | Droid Sans Mono Regular (powerline) 11 |
 
 Web browser customisation:
 [Chrome style - Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)

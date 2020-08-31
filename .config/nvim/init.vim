@@ -16,8 +16,13 @@ set incsearch
 set number relativenumber
 set nu rnu
 set colorcolumn=80
+set list
+set listchars=tab:↦\ ,trail:·,space:·
+
+match Whitespace /\s/
+highlight Whitespace ctermfg=DarkGray
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-highlight LineNr ctermfg=grey
+highlight LineNr ctermfg=DarkGrey
 
 
 " Keybinds
@@ -28,6 +33,7 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
+
 
 " toggle hybrid line numbers when switching between insert mode
 :augroup numbertoggle
