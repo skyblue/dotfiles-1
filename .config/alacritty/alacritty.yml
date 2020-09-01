@@ -72,7 +72,7 @@ schemes:
       blue: '0x75BEFF'
       magenta: '0xB180D7'
       cyan: '0xEB8B94'
-      white: '0xbdbdbd'
+      white: '0xEEEEEC'
     bright:
       black: '0x6d6d6d'
       red: '0xCC6666'
@@ -81,7 +81,7 @@ schemes:
       blue: '0x75BEFF'
       magenta: '0xB180D7'
       cyan: '0xEB8B94'
-      white: '0xefefef'
+      white: '0xEEEEEC'
 
 
 colors: *tomorrow
