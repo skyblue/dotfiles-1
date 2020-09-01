@@ -71,7 +71,7 @@ schemes:
       yellow: '0xF0C674'
       blue: '0x75BEFF'
       magenta: '0xB180D7'
-      cyan: '0xEB8B9'
+      cyan: '0xEB8B94'
       white: '0xbdbdbd'
     bright:
       black: '0x6d6d6d'
@@ -80,7 +80,7 @@ schemes:
       yellow: '0xF0C674'
       blue: '0x75BEFF'
       magenta: '0xB180D7'
-      cyan: '0xEB8B9'
+      cyan: '0xEB8B94'
       white: '0xefefef'
 
 
