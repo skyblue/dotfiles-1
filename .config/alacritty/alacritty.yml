@@ -6,9 +6,6 @@ window:
 
   decorations: none
 
-key_bindings:
-    - { key: Return,    mods: Control|Shift, action: SpawnNewInstance }
-
 env:
   TERM: xterm-256color
 

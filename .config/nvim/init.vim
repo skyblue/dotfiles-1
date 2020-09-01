@@ -25,7 +25,9 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 highlight LineNr ctermfg=DarkGrey
 
 
+"=============================
 " Keybinds
+"=============================
 let mapleader=" "
 :imap ii <Esc>
 nnoremap <leader>h :wincmd h<CR>
@@ -43,6 +45,9 @@ nnoremap <leader>u :UndotreeShow<CR>
 :augroup END
 
 
+"=============================
+" Plugins
+"=============================
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
