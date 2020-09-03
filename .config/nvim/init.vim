@@ -15,13 +15,18 @@ set undofile
 set incsearch
 set number relativenumber
 set nu rnu
+
+au Filetype html setl ts=2 sw=2 et
+
+"=============================
+" Style
+"=============================
 set colorcolumn=80
 set list
 set listchars=tab:↦\ ,trail:·,space:·
-
 match Whitespace /\s/
 highlight Whitespace ctermfg=DarkGray
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+highlight ColorColumn ctermfg=0 guibg=lightgrey
 highlight LineNr ctermfg=DarkGrey
 
 

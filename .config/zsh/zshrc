@@ -131,7 +131,7 @@ alias .....="cd ../../../.."
 alias l="ls --color=auto"                                       # ls
 alias ls="ls --color=auto"                                      # ls
 alias la="ls -A --color=auto"                                   # ls -A
-alias ll="ls -lahF --color=auto"                                # ls -l
+alias ll="ls -lahF --color=auto --group-directories-first"      # ls -l
 
 alias grep="grep --color=auto"                                  #
 alias egrep="egrep --color=auto"                                #
