@@ -6,7 +6,7 @@ set shiftwidth=4
 set expandtab                           "spaces instead of tabs
 set smartindent
 set nu
-set nowrap
+"set nowrap
 set smartcase
 set noswapfile
 set nobackup
