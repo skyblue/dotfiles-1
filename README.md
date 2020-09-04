@@ -100,10 +100,8 @@ config remote add dotfiles https://github.com/2O4/dotfiles.git
 config pull dotfiles master
 ```
 
-install vim plug: [here](https://github.com/junegunn/vim-plug)
-and type this into neovim:
 ```
-:PlugInstall
+config submodule update --init --recursive
 ```
 
 ## Set up custom configs path
