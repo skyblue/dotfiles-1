@@ -53,6 +53,8 @@ nnoremap <leader>u :UndotreeShow<CR>
 "=============================
 " Plugins
 "=============================
+autocmd User GnuPG setl textwidth=72
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
