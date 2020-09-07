@@ -27,6 +27,7 @@ alias grep="grep --color=auto"                                  #
 alias egrep="egrep --color=auto"                                #
 alias fgrep="fgrep --color=auto"                                #
 
+# Git
 alias g="git"                                                   # Git
 alias ga="git add"                                              #
 alias gaa="git add --all"                                          #
@@ -35,3 +36,6 @@ alias gs="git status"                                           #
 alias gc="git commit -m"                                        #
 alias gpl="git pull"                                            #
 alias gd="git diff"                                             #
+
+alias reload="exec ${SHELL} -l"
+
