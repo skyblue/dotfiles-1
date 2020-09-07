@@ -1,6 +1,23 @@
-# dotfiles
+# 2O4's dotfiles
 
 ![](Pictures/.keep/main.png)
+
+## Installation
+
+```
+mkdir .dotfiles && git init --bare $HOME/.dotfiles && echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> .bashrc
+```
+
+Restart bash
+
+Configure the git bare repo and pull.
+```
+config config --local status.showUntrackedFiles no && config remote add dotfiles https://github.com/2O4/dotfiles.git && config pull dotfiles master && config submodule update --init --recursive
+```
+
+```
+echo "source ~/.config/zsh/zshrc" > ~/.zshrc
+```
 
 | Software | used |
 |---|---|
@@ -73,44 +90,6 @@ Web browser customisation:
 ## Wallpapers
 
 I do not own the right to the wallpapers images.
-
-![](Pictures/Wallpapers/forest.jpg)
-
-![](Pictures/Wallpapers/dc-cavalleri.jpg)
-
-For wide screen
-![](Pictures/Wallpapers/_smokefilledsnoqualmievalley.jpg)
-
-## Setup git bare
-
-```
-mkdir .dotfiles && git init --bare $HOME/.dotfiles && echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> .bashrc
-```
-
-Restart bash
-```
-config config --local status.showUntrackedFiles no
-```
-
-```
-config remote add dotfiles https://github.com/2O4/dotfiles.git
-```
-
-```
-config pull dotfiles master
-```
-
-```
-config submodule update --init --recursive
-```
-
-## Set up custom configs path
-
-```
-echo "source ~/.config/zsh/zshrc" > ~/.zshrc
-```
-
-This file allow custom settings localy
 
 ## To use it
 
