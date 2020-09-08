@@ -26,9 +26,10 @@ set colorcolumn=80
 set list
 set listchars=tab:↦\ ,trail:·,space:·
 match Whitespace /\s/
-highlight Whitespace ctermfg=darkgrey
-highlight ColorColumn ctermbg=0 guibg=darkgrey
-highlight LineNr ctermfg=DarkGrey ctermbg=235
+hi Whitespace ctermfg=darkgrey
+hi ColorColumn ctermbg=0 guibg=darkgrey
+hi LineNr ctermfg=DarkGrey ctermbg=235
+hi CursorLineNr ctermbg=235
 
 
 "=============================
