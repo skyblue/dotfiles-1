@@ -5,7 +5,6 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab                           "spaces instead of tabs
 set smartindent
-set nu
 "set nowrap
 set smartcase
 set noswapfile
@@ -22,14 +21,24 @@ au Filetype html setl ts=2 sw=2 et
 "=============================
 " Style
 "=============================
-set colorcolumn=80
+
+" show and color tab and space characters
 set list
 set listchars=tab:↦\ ,trail:·,space:·
 match Whitespace /\s/
 hi Whitespace ctermfg=darkgrey
-hi ColorColumn ctermbg=0 guibg=darkgrey
+
+" line numbers style
 hi LineNr ctermfg=DarkGrey ctermbg=235
 hi CursorLineNr ctermbg=235
+
+" show a column at 80 chars
+"set colorcolumn=80
+"hi ColorColumn ctermbg=0 guibg=darkgrey
+
+" highlight the background of lines over 80 chars
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
 
 "=============================
@@ -37,12 +46,14 @@ hi CursorLineNr ctermbg=235
 "=============================
 let mapleader=" "
 :imap ii <Esc>
+
+" change files
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>u :UndotreeShow<CR>
 
+nnoremap <leader>u :UndotreeShow<CR>
 
 " toggle hybrid line numbers when switching between insert mode
 :augroup numbertoggle
@@ -58,8 +69,14 @@ nnoremap <leader>u :UndotreeShow<CR>
 autocmd User GnuPG setl textwidth=72
 
 call plug#begin('~/.config/nvim/plugged')
+
+" style
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" python
+Plug 'davidhalter/jedi-vim'
+
 call plug#end()
 
 " air-line
