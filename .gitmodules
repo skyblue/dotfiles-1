@@ -13,3 +13,6 @@
 [submodule ".config/nvim/plugged/vim-gnupg"]
 	path = .config/nvim/plugged/vim-gnupg
 	url = https://github.com/jamessan/vim-gnupg
+[submodule ".config/nvim/plugged/YouCompleteMe"]
+	path = .config/nvim/plugged/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe

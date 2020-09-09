@@ -74,6 +74,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" autocomplete
+Plug 'ycm-core/YouCompleteMe'
+
 " python
 Plug 'davidhalter/jedi-vim'
 
