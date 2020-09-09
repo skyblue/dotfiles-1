@@ -82,9 +82,9 @@ Plug 'ycm-core/YouCompleteMe'
 " python
 "Plug 'davidhalter/jedi-vim'
 
-Plug 'airblade/vim-gitgutter'
-let g:gitgutter_sign_column_always = 1
-highlight SignColumn ctermbg=NONE guibg=NONE
+"Plug 'airblade/vim-gitgutter'
+"let g:gitgutter_sign_column_always = 1
+"highlight SignColumn ctermbg=NONE guibg=NONE
 
 " style
 Plug 'vim-airline/vim-airline'
