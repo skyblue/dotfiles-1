@@ -21,13 +21,8 @@ export GPG_TTY="tty"
 
 # TMUX - checks if tmux is installed before trying to launch it
 if which tmux >/dev/null 2>&1; then
-    # if no session is started, start a new session
-    test -z ${TMUX} && tmux
-
-    # when quitting tmux, try to attach
-    while test -z ${TMUX}; do
-        tmux attach || break
-    done
+    #if not inside a tmux session, and if no session is started, start a new session
+    test -z "$TMUX" && (tmux attach || tmux new-session)
 fi
 
 

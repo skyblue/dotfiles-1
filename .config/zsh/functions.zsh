@@ -6,21 +6,21 @@ function cd_up() {
     zle accept-line
 }
 zle -N cd_up
-bindkey '^k' cd_up                                              # cd ..
+bindkey '^[k' cd_up                                              # cd ..
 
 function ll_current() {
     BUFFER="ll"
     zle accept-line
 }
 zle -N ll_current
-bindkey '^j' ll_current                                         # ll
+bindkey '^[j' ll_current                                         # ll
 
 function git_root() {
     BUFFER="cd $(git rev-parse --show-toplevel || echo ".")"
     zle accept-line
 }
 zle -N git_root
-bindkey '^h' git_root                                           # git root
+bindkey '^[h' git_root                                           # git root
 
 function git_prepare() {
     if [ -n "$BUFFER" ];
@@ -34,7 +34,7 @@ function git_prepare() {
     zle accept-line
 }
 zle -N git_prepare
-bindkey '^g' git_prepare                                        # git add, commit, push
+bindkey '^[g' git_prepare                                        # git add, commit, push
 
 # color-ssh is a custom function to change the background color of the terminal
 # based on the ssh connection, source: https://bryangilbert.com/post/etc/term/dynamic-ssh-terminal-background-colors/
@@ -44,6 +44,8 @@ color-ssh() {
         colorterm.sh prod
     elif [[ "$*" =~ "dev" ]]; then
         colorterm.sh dev
+    elif [[ "$*" =~ "vpn" ]]; then
+        colorterm.sh vpn
     else
         colorterm.sh other
     fi

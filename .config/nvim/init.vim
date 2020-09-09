@@ -28,6 +28,9 @@ set listchars=tab:↦\ ,trail:·,space:·
 match Whitespace /\s/
 hi Whitespace ctermfg=darkgrey
 
+" split
+hi VertSplit guibg=NONE ctermbg=NONE guifg=darkgrey
+
 " line numbers style
 hi LineNr ctermfg=DarkGrey
 "hi LineNr ctermfg=DarkGrey ctermbg=235
@@ -38,7 +41,7 @@ hi LineNr ctermfg=DarkGrey
 "hi ColorColumn ctermbg=0 guibg=darkgrey
 
 " highlight the background of lines over 80 chars
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+hi OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 
@@ -73,35 +76,24 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'
 
-" style
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
 " autocomplete
 Plug 'ycm-core/YouCompleteMe'
 
 " python
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 
 Plug 'airblade/vim-gitgutter'
 let g:gitgutter_sign_column_always = 1
 highlight SignColumn ctermbg=NONE guibg=NONE
 
-call plug#end()
-
-" air-line
-let g:airline_theme='custom'
-
+" style
+Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
-
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#formatter = 'default'
-
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
-" unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
@@ -114,8 +106,6 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-
-" airline symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -123,4 +113,9 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='custom'
+
+call plug#end()
 

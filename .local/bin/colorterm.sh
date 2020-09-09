@@ -12,6 +12,8 @@ if [[ "$TERM" = "tmux"* ]] && [[ -n "$TMUX" ]]; then
     tmux select-pane -P 'bg=#331C1F';
   elif [ "$1" == "dev" ]; then
     tmux select-pane -P 'bg=#192436';
+  elif [ "$1" == "vpn" ]; then
+    tmux select-pane -P 'bg=#362A19';
   elif [ "$1" == "other" ]; then
     tmux select-pane -P 'bg=#253320';
   else
