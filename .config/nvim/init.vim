@@ -29,8 +29,9 @@ match Whitespace /\s/
 hi Whitespace ctermfg=darkgrey
 
 " line numbers style
-hi LineNr ctermfg=DarkGrey ctermbg=235
-hi CursorLineNr ctermbg=235
+hi LineNr ctermfg=DarkGrey
+"hi LineNr ctermfg=DarkGrey ctermbg=235
+"hi CursorLineNr ctermbg=235
 
 " show a column at 80 chars
 "set colorcolumn=80
@@ -48,10 +49,10 @@ let mapleader=" "
 :imap ii <Esc>
 
 " change files
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+"nnoremap <leader>h :wincmd h<CR>
+"nnoremap <leader>j :wincmd j<CR>
+"nnoremap <leader>k :wincmd k<CR>
+"nnoremap <leader>l :wincmd l<CR>
 
 nnoremap <leader>u :UndotreeShow<CR>
 
@@ -70,6 +71,8 @@ autocmd User GnuPG setl textwidth=72
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'christoomey/vim-tmux-navigator'
+
 " style
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -79,6 +82,10 @@ Plug 'ycm-core/YouCompleteMe'
 
 " python
 Plug 'davidhalter/jedi-vim'
+
+Plug 'airblade/vim-gitgutter'
+let g:gitgutter_sign_column_always = 1
+highlight SignColumn ctermbg=NONE guibg=NONE
 
 call plug#end()
 
