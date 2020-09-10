@@ -57,6 +57,8 @@ Web browser customisation:
 
 To come:
 * 'Zen mode' for vim (like in VSCode) only keep the code and center it with space on the side
+* Color file/folder inside NerdTree instead of git symbols
+* Fix a bug where NerdTree still show line nbr after opening a file
 
 ## Shortcuts
 
