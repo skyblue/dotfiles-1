@@ -34,7 +34,7 @@ echo "source ~/.config/zsh/zshrc" > ~/.zshrc
 | File | [ranger](https://github.com/ranger/ranger) [Nautilus](https://github.com/GNOME/nautilus) |
 | Editor | [Code - OSS](https://code.visualstudio.com/), [NeoVim](https://github.com/neovim/neovim) |
 | Web | [Brave](https://brave.com/) |
-| Font | Droid Sans Mono Regular (powerline) 11 |
+| Font | [Droid Sans Mono Regular (Nerd Font)](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DroidSansMono) 11 |
 
 Web browser customisation:
 [Chrome style - Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
@@ -47,6 +47,34 @@ Web browser customisation:
 , [Protonmail theme](https://github.com/amdelamar/pm-theme)
 
 ## Shortcuts
+
+### Terminal shortcuts
+
+The `change pane` shortcuts are shared between vim and tmux using [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) plugin.
+
+| Program | Action | Shortcut |
+|--|--|
+| tmux | Tmux prefix | Ctrl+a |
+| tmux/vim | Change pane left | Ctrl+h |
+| tmum/vim | Change pane down | Ctrl+j |
+| tmum/vim | Change pane up | Ctrl+k |
+| tmum/vim | Change pane right | Ctrl+l |
+| tmux | New window | Ctrl+t |
+| tmux | Previous window | Alt+b |
+| tmux | Next window | Alt+n |
+| tmux | New vertical split pane | Ctrl+a t |
+| tmux | New horizontal split pane | Ctrl+a y |
+| tmux | Swap pane | Ctrl+a Ctrl+o |
+| tmux | Kill pane | Ctrl+a w |
+| tmux | Kill window | Ctrl+a W |
+| tmux | Kill all other windows | Ctrl+a Ctrl+w |
+| tmux | Kill session | Ctrl+a q |
+| vim | Exit insert | ii |
+| vim | NerdTree toggle | \<space\>+n |
+| tmux | Toggle mouse | Ctrl+a m |
+| tmux | Edit config and reload | Ctrl+a Ctrl+e |
+
+### WM shortcuts
 
 | System | Shortcut |
 |---|---|

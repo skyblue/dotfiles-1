@@ -29,7 +29,7 @@ match Whitespace /\s/
 hi Whitespace ctermfg=darkgrey
 
 " split
-hi VertSplit guibg=NONE ctermbg=NONE guifg=darkgrey
+hi VertSplit guibg=#6c6c6c ctermbg=242 guifg=NONE
 
 " line numbers style
 hi LineNr ctermfg=DarkGrey
@@ -58,6 +58,7 @@ let mapleader=" "
 "nnoremap <leader>l :wincmd l<CR>
 
 nnoremap <leader>u :UndotreeShow<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " toggle hybrid line numbers when switching between insert mode
 :augroup numbertoggle
@@ -74,17 +75,51 @@ autocmd User GnuPG setl textwidth=72
 
 call plug#begin('~/.config/nvim/plugged')
 
+
 Plug 'christoomey/vim-tmux-navigator'
+
+
+Plug 'preservim/nerdtree' | 
+    \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+    \ Plug 'ryanoasis/vim-devicons'
+let NERDTreeIgnore = [ '__pycache__', '\.pyc$', '\.o$', '\.swp',  '*\.swp',  'node_modules/' ]
+let NERDTreeShowHidden=1
+autocmd vimenter * NERDTree                         " open a NERDTree automatically
+autocmd StdinReadPre * let s:std_in=1               " open NERDTree automatically on a directory
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   " close vim if the only window left open is a NERDTree 
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '    " Padding on the right of the icon
 
 " autocomplete
 Plug 'ycm-core/YouCompleteMe'
+let g:ycm_collect_identifiers_from_tags_files = 1   " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1               " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1          " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1                  " Completion in comments
+let g:ycm_complete_in_strings = 1                   " Completion in string
+
+
+" Snippets engine
+Plug 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+"let g:UltiSnipsExpandTrigger       = "<c-g>"
+"let g:UltiSnipsJumpForwardTrigger  = "<c-g>"
+"let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+"let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
+
 
 " python
 "Plug 'davidhalter/jedi-vim'
 
-"Plug 'airblade/vim-gitgutter'
-"let g:gitgutter_sign_column_always = 1
-"highlight SignColumn ctermbg=NONE guibg=NONE
+
+Plug 'airblade/vim-gitgutter'
+let g:gitgutter_sign_column_always = 1
+highlight SignColumn ctermbg=NONE guibg=NONE
+
 
 " style
 Plug 'vim-airline/vim-airline'
@@ -116,6 +151,7 @@ let g:airline_symbols.linenr = ''
 
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='custom'
+
 
 call plug#end()
 
