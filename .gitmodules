@@ -16,3 +16,6 @@
 [submodule ".config/nvim/plugged/YouCompleteMe"]
 	path = .config/nvim/plugged/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe
+[submodule ".config/tmux/plugins/tmux-prefix-highlight"]
+	path = .config/tmux/plugins/tmux-prefix-highlight
+	url = https://github.com/tmux-plugins/tmux-prefix-highlight
