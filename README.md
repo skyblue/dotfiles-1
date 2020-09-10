@@ -46,11 +46,21 @@ Web browser customisation:
 , [Stack Overflow theme - StackOverflow-Dark](https://github.com/StylishThemes/StackOverflow-Dark)
 , [Protonmail theme](https://github.com/amdelamar/pm-theme)
 
+
+## Features
+
+* Modern and minimalist style
+* The `change pane` shortcuts are shared between vim and tmux using [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) plugin.
+* NerdTree for vim with extension for [Git](https://github.com/Xuyuanp/nerdtree-git-plugin) and [icons](https://github.com/ryanoasis/vim-devicons)
+* Background color change automaticly base on SSH conenction
+* Fast and easy to use keybinds for tmux and vim
+
+To come:
+* 'Zen mode' for vim (like in VSCode) only keep the code and center it with space on the side
+
 ## Shortcuts
 
 ### Terminal shortcuts
-
-The `change pane` shortcuts are shared between vim and tmux using [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) plugin.
 
 | Program | Action | Shortcut |
 |--|--|--|
