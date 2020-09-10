@@ -85,6 +85,7 @@ Plug 'preservim/nerdtree' |
 let NERDTreeIgnore = [ '__pycache__', '\.pyc$', '\.o$', '\.swp',  '*\.swp',  'node_modules/' ]
 let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree                         " open a NERDTree automatically
+autocmd vimenter * wincmd p                         " focus on file
 autocmd StdinReadPre * let s:std_in=1               " open NERDTree automatically on a directory
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   " close vim if the only window left open is a NERDTree 
