@@ -53,7 +53,7 @@ Web browser customisation:
 The `change pane` shortcuts are shared between vim and tmux using [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) plugin.
 
 | Program | Action | Shortcut |
-|--|--|
+|--|--|--|
 | tmux | Tmux prefix | Ctrl+a |
 | tmux/vim | Change pane left | Ctrl+h |
 | tmum/vim | Change pane down | Ctrl+j |
