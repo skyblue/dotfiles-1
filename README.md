@@ -74,8 +74,8 @@ To come:
 | tmux | New window | Ctrl+t |
 | tmux | Previous window | Alt+b |
 | tmux | Next window | Alt+n |
-| tmux | New vertical split pane | Ctrl+a t |
-| tmux | New horizontal split pane | Ctrl+a y |
+| tmux | New vertical split pane | Ctrl+a v |
+| tmux | New horizontal split pane | Ctrl+a s |
 | tmux | Swap pane | Ctrl+a Ctrl+o |
 | tmux | Kill pane | Ctrl+a w |
 | tmux | Kill window | Ctrl+a W |
@@ -83,6 +83,9 @@ To come:
 | tmux | Kill session | Ctrl+a q |
 | vim | Exit insert | ii |
 | vim | NerdTree toggle | \<space\>+n |
+| vim | NerdTree open | l |
+| vim | NerdTree split | s |
+| vim | NerdTree Vsplit | v |
 | tmux | Toggle mouse | Ctrl+a m |
 | tmux | Edit config and reload | Ctrl+a Ctrl+e |
 
