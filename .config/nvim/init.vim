@@ -58,7 +58,6 @@ let mapleader=" "
 "nnoremap <leader>l :wincmd l<CR>
 
 nnoremap <leader>u :UndotreeShow<CR>
-map <leader>n :NERDTreeToggle<CR>
 
 " toggle hybrid line numbers when switching between insert mode
 :augroup numbertoggle
@@ -82,16 +81,23 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree' | 
     \ Plug 'Xuyuanp/nerdtree-git-plugin' |
     \ Plug 'ryanoasis/vim-devicons'
-let NERDTreeIgnore = [ '__pycache__', '\.pyc$', '\.o$', '\.swp',  '*\.swp',  'node_modules/' ]
-let NERDTreeShowHidden=1
+map <leader>n :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree                         " open a NERDTree automatically
 autocmd vimenter * wincmd p                         " focus on file
 autocmd StdinReadPre * let s:std_in=1               " open NERDTree automatically on a directory
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   " close vim if the only window left open is a NERDTree 
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+let NERDTreeIgnore = [ '__pycache__', '\.pyc$', '\.o$', '\.swp',  '*\.swp',  'node_modules/' ]
+let NERDTreeShowHidden=1
+let g:NERDTreeDirArrowExpandable = ''               " to remove arrow symbol
+let g:NERDTreeDirArrowCollapsible = ''              " to remove arrow symbol
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '    " Padding on the right of the icon
+let NERDTreeMapOpenSplit="s"
+let NERDTreeMapPreviewSplit="gs"
+let NERDTreeMapOpenVSplit="v"
+let NERDTreeMapPreviewVSplit="gv"
+let NERDTreeMapActivateNode="l"
+
 
 " autocomplete
 Plug 'ycm-core/YouCompleteMe'
